@@ -24,8 +24,8 @@ jobs:
 
       - name: Build and tag Docker image
         run: |
-          docker build -t your-dockerhub-username/vite-react-app:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/vite-react-app:latest .
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker push your-dockerhub-username/vite-react-app:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/vite-react-app:latest
